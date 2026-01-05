@@ -2,21 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>AI Character App</title>
+  <title>StarLineAI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>AI Character Chat</h1>
+<h1>StarLineAI</h1>
 
-<select id="characterSelect"></select>
+<section id="characterCreator">
+  <h2>Create Character</h2>
+  <input id="charName" placeholder="Character Name">
+  <textarea id="charPersonality" placeholder="Personality"></textarea>
+  <button onclick="createCharacter()">Create</button>
+</section>
 
-<div id="chat"></div>
+<section id="characterSelectSection">
+  <h2>Select Character</h2>
+  <select id="characterSelect"></select>
+</section>
 
-<input id="userInput" placeholder="Say something..." />
-<button onclick="sendMessage()">Send</button>
+<section id="statusPanel">
+  <h2>Status</h2>
+  <pre id="statusDisplay"></pre>
+</section>
+
+<section id="chatSection">
+  <h2>Chat</h2>
+  <div id="chat"></div>
+  <input id="userInput" placeholder="Say something">
+  <button onclick="sendMessage()">Send</button>
+</section>
 
 <script src="characters.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
